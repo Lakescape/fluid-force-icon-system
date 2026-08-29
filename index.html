@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluid Force Solutions – Icon System & Product Page</title>
+  <link rel="icon" href="/icons/favicons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/icons/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#00C4E0" />
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0d0d0f;
+      --cyan: #00C4E0;
+      --text: #e8e8ea;
+      --muted: #8a8a90;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(5,5,5,0.9);
+      border-bottom: 1px solid #1a1a1c;
+      position: sticky; top: 0; z-index: 50;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--cyan);
+      letter-spacing: 0.05em;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span { color: var(--cyan); }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.15rem;
+      max-width: 28rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--cyan);
+      color: #000;
+      font-weight: 600;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .hero-icon {
+      width: 100%;
+      max-width: 380px;
+      margin: 0 auto;
+      border-radius: 32px;
+      background: var(--surface);
+      padding: 1.5rem;
+      box-shadow: 0 0 60px rgba(0,196,224,0.15);
+    }
+    .hero-icon img { width: 100%; display: block; border-radius: 20px; }
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .section-sub { color: var(--muted); margin-bottom: 2.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 1.5rem;
+      border: 1px solid #1a1a1c;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--cyan); }
+    .card img {
+      width: 100%;
+      border-radius: 16px;
+      background: #000;
+      margin-bottom: 1rem;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+    .card p { color: var(--muted); font-size: 0.9rem; }
+    .modes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .mode-box {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .mode-box.light { background: #f4f4f6; color: #111; }
+    .mode-box img { width: 180px; height: 180px; border-radius: 24px; margin: 1rem auto; display: block; }
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid #1a1a1c;
+    }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero p { margin-left: auto; margin-right: auto; }
+      .modes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">FLUID FORCE</div>
+    <div class="nav-links">
+      <a href="#icons">Icons</a>
+      <a href="#modes">Dark / Light</a>
+      <a href="https://github.com/Lakescape/fluid-force-icon-system" target="_blank">GitHub</a>
+      <a href="https://drive.google.com/drive/folders/1P0hJwdZJ_KbrJaNe9ayHRzrBEocOQrez" target="_blank">Drive</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <h1>Aftermarket<br><span>Hydraulic Power</span></h1>
+      <p>The first custom assembled lineup for all aftermarket hydraulic boat lift parts. OEM → better fully engineered replacement.</p>
+      <a class="btn" href="#icons">Explore Icon System</a>
+    </div>
+    <div class="hero-icon">
+      <img src="/icons/dark/01-dual-cylinder-512.png" alt="Fluid Force Dual-Cylinder Power Unit Icon" />
+    </div>
+  </div>
+
+  <section id="icons">
+    <h2>Production Icon Set</h2>
+    <p class="section-sub">Four original marks. Dark-pro industrial. High contrast. 48px ready. Completely distinct from industry competitors.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="/icons/dark/01-dual-cylinder-512.png" alt="Dual-Cylinder Power Unit" />
+        <h3>Dual-Cylinder Power Unit</h3>
+        <p>Primary product & logo mark. Twin industrial cylinders + hose energy.</p>
+      </div>
+      <div class="card">
+        <img src="/icons/dark/02-abstract-flow-512.png" alt="Abstract Force Flow" />
+        <h3>Interlocking Force Flow</h3>
+        <p>Abstract geometric motion – perfect for secondary / category icons.</p>
+      </div>
+      <div class="card">
+        <img src="/icons/dark/03-ff-monogram-512.png" alt="FF Monogram" />
+        <h3>FF Monogram</h3>
+        <p>Letterform built as dual cylinders. Strong brand identity mark.</p>
+      </div>
+      <div class="card">
+        <img src="/icons/dark/04-force-ram-512.png" alt="Force Ram" />
+        <h3>Force Ram</h3>
+        <p>Powerful hydraulic ram with dual base – pure lift-force symbol.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="modes">
+    <h2>Dark + Light Mode Ready</h2>
+    <p class="section-sub">Every mark exists in both high-contrast dark and light versions for web, app, and marketing.</p>
+    <div class="modes">
+      <div class="mode-box">
+        <strong>Dark Mode (default)</strong>
+        <img src="/icons/dark/01-dual-cylinder-512.png" alt="Dark dual cylinder" />
+        <p style="color:var(--muted);font-size:0.9rem">Pure black · Electric cyan · Silver accents</p>
+      </div>
+      <div class="mode-box light">
+        <strong>Light Mode</strong>
+        <img src="/icons/light/01-dual-cylinder-512.png" alt="Light dual cylinder" />
+        <p style="color:#555;font-size:0.9rem">White · Charcoal · Cyan accents</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ready for Production</h2>
+    <p class="section-sub">Full size matrix (16 → 2048), favicons, Apple/Android packs, and masters live in Drive + this repo.</p>
+    <ul style="color:var(--muted);padding-left:1.25rem;line-height:1.8">
+      <li>Favicon.ico + 16/32 + apple-touch + android-chrome 192/512</li>
+      <li>App Store pack (64 → 1024)</li>
+      <li>All 4 marks × 11 sizes × dark + light</li>
+      <li>Figma source of truth + Linear project tracking</li>
+    </ul>
+  </section>
+
+  <footer>
+    Fluid Force Solutions · fluidforcesolutions.com · Icon System 2026<br>
+    Generated with Grok Imagine · Managed via Figma · Drive · Linear · GitHub · Vercel
+  </footer>
+</body>
+</html>
